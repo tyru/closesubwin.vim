@@ -4,12 +4,11 @@ set cpo&vim
 
 
 function! closesubwin#close_help_window() abort
-    return s:window.close_first_like('s:is_help_window(winnr)')
+    helpclose
 endfunction
 
 function! closesubwin#close_quickfix_window() abort
-    " cclose
-    return s:window.close_first_like('s:is_quickfix_window(winnr)')
+    cclose
 endfunction
 
 function! closesubwin#close_unlisted_window() abort
